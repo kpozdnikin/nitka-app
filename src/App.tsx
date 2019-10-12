@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
-import './App.css';
+import './App.scss';
 
 const App: React.FC = () => {
 
