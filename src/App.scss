@@ -4,8 +4,12 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-size: calc(10px + 2vmin);
+  font-size: 24px;
   padding: 1rem;
+
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
 
   .app-header {
     min-height: 10vh;
@@ -15,6 +19,7 @@
   }
 
   .app-body {
+    overflow: auto;
 
     .initial-form {
       width: 400px;
@@ -25,6 +30,53 @@
 
       form {
         width: 100%;
+
+        textarea {
+          width: 100%;
+        }
+      }
+    }
+
+    textarea {
+      line-height: 24px;
+    }
+
+    .layout {
+      width: 1200px;
+      margin: 0 auto;
+      height: 90vh;
+      padding: 10px;
+      background-color: white;
+      border-radius: .25rem;
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      .layout-text {
+        display: grid;
+        grid-gap: 10px;
+
+        textarea {
+          overflow:hidden;
+          border: none;
+          outline: none;
+          -webkit-box-shadow: none;
+          -moz-box-shadow: none;
+          box-shadow: none;
+          resize: none;
+          text-align: justify;
+        }
+
+        &.one {
+          grid-template-columns: 1fr;
+        }
+
+        &.two {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        &.three {
+          grid-template-columns: 1fr 1fr 1fr;
+        }
       }
     }
   }
