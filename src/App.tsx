@@ -99,7 +99,7 @@ const App: React.FC = () => {
           <div className="initial-form">
             <form onSubmit={submit}>
               <div className="form-group">
-                <label>Please type some text here</label>
+                <label>Please type some text with spaces here</label>
                 <textarea
                   value={initialValue}
                   onChange={(e) => handleInitialValueChange(e)}
